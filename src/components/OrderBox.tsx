@@ -1,4 +1,4 @@
-import { Info, Plus, QrCode, Search, Wallet } from "lucide-react";
+import { Plus, QrCode, Search, Wallet } from "lucide-react";
 import { Button } from "./ui/button";
 import NoDataSVG from "@/assets/no-data.svg";
 import { Input } from "./ui/input";
@@ -12,24 +12,22 @@ import swiggyDark from "@/assets/swiggy-dark.png";
 import swiggyLight from "@/assets/swiggy-light.png";
 import { ToggleGroup, ToggleGroupItem } from "./ui/toggle-group";
 import { useTheme } from "./ui/theme-provider";
-import { useAtom } from "jotai";
-import { ordersAtom } from "@/atoms/orders.atom";
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hovercard";
-import { Separator } from "./ui/separator";
 import { toast } from "sonner";
 import { getMenuItems } from "@/api/menu.api";
 import { MenuType } from "@/types/menu.type";
+import Order from "./Order";
+import useOrderList from "@/hooks/ordersList.hook";
 
 export default function OrderBox() {
   const { theme } = useTheme();
   const containerRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
-  const orders = useAtom(ordersAtom)[0];
+  const {ordersObject} = useOrderList();
   const [menu, setMenu] = useState<MenuType["items"] | null>(null);
 
   const todayTotal = useMemo(() => {
-    return orders?.reduce((total, order) => total + order.allTotal, 0);
-  }, [orders]);
+    return ordersObject.orderList?.reduce((total, order) => total + order.allTotal, 0);
+  }, [ordersObject.orderList]);
 
   useEffect(() => {
     getMenuItems().then((response) => {
@@ -60,7 +58,7 @@ export default function OrderBox() {
       className="relative w-[96%] lg:w-1/3 bg-background mx-auto rounded-md p-2 flex flex-col justify-between items-center h-[600px] max-w-[800px] overflow-hidden border"
       ref={containerRef}
     >
-      {orders ? (
+      {ordersObject.orderList ? (
         <>
           <motion.div
             className="absolute top-10 z-20 flex flex-col gap-4 justify-center items-center w-[80%]"
@@ -85,82 +83,8 @@ export default function OrderBox() {
               <h4 className="mb-4 text-sm font-semibold leading-none">
                 Orders
               </h4>
-              {orders.map((order) => (
-                <div className="w-full p-2 relative h-20 border bg-muted/20 rounded-md flex justify-between items-center px-4">
-                  <span className="absolute top-1.5 left-3.5 text-sm font-mono text-muted-foreground">
-                    {order.orderId}
-                  </span>
-                  {order.isZomato && (
-                    <img
-                      src={theme === "light" ? zomatoLight : zomatoDark}
-                      className="absolute bottom-2 left-4 w-12 opacity-60"
-                    />
-                  )}
-                  {order.isSwiggy && (
-                    <img
-                      src={theme === "light" ? swiggyLight : swiggyDark}
-                      className="absolute bottom-2 left-4 w-12 opacity-60"
-                    />
-                  )}
-                  <span className="text-sm sm:text-base font-thin max-w-[60%] truncate">
-                    {order.name}
-                  </span>
-                  <HoverCard openDelay={0}>
-                    <HoverCardTrigger asChild>
-                      <Button
-                        variant={"secondary"}
-                        effect={"ringHover"}
-                        className="w-8 h-8"
-                        size={"icon"}
-                      >
-                        <Info />
-                      </Button>
-                    </HoverCardTrigger>
-                    <HoverCardContent className="p-0 mt-2 overflow-hidden">
-                      {order.items.map((item) => (
-                        <>
-                          <div
-                            key={item.id}
-                            className="text-muted-foreground flex justify-between items-center px-4 py-2"
-                          >
-                            <span className="text-sm font-semibold">
-                              {item.name}
-                            </span>
-                            <span className="text-base font-bold">
-                              ₹{item.varients.price}
-                            </span>
-                          </div>
-                          <Separator className="w-full" />
-                        </>
-                      ))}
-                      <div className="text-muted-foreground flex justify-between items-center px-4 py-2">
-                        <span className="text-base font-semibold">Total</span>
-                        <span className="text-lg font-bold">
-                          ₹{order.allTotal}
-                        </span>
-                      </div>
-                    </HoverCardContent>
-                  </HoverCard>
-
-                  <div className="text-xs font-medium flex flex-col justify-center items-end gap-1.5 text-muted-foreground">
-                    <span className="text-xl sm:text-2xl font-bold text-foreground">
-                      ₹{order.allTotal}
-                    </span>
-                    <div className="flex justify-center items-center gap-1.5">
-                      {" "}
-                      Paid via{" "}
-                      {order.isCash ? (
-                        <>
-                          <Wallet className="w-4 h-4" /> Cash
-                        </>
-                      ) : (
-                        <>
-                          <QrCode className="w-4 h-4" /> Online
-                        </>
-                      )}
-                    </div>
-                  </div>
-                </div>
+              {ordersObject.orderList.map((order) => (
+                <Order order={order} />
               ))}
             </div>
           </ScrollArea>

@@ -11,40 +11,18 @@ import {
 } from "./components/ui/popover";
 import { Button } from "./components/ui/button";
 import { cn } from "./lib/utils";
-import { format, isSameDay } from "date-fns";
+import { format} from "date-fns";
 import { Calendar } from "./components/ui/calendar";
-import { useEffect, useState } from "react";
-import { ordersAtom } from "./atoms/orders.atom";
-import { getOrderList } from "./firebase/functions";
-import { OrderType } from "./types/order.type";
-import { toast } from "sonner";
+import { useEffect } from "react";
+import { dateAtom } from "./atoms/date-atom";
+import useOrderList from "./hooks/ordersList.hook";
 
 function App() {
-
-  const [date, setDate] = useState<Date>(new Date());
-  const setOrders = useAtom(ordersAtom)[1];
+  const [date, setDate] = useAtom(dateAtom);
+  const { ordersObject } = useOrderList();
 
   useEffect(() => {
-    getOrderList().then((orders) => {
-      if (orders.success) {
-        const filteredOrder = orders.data?.filter((order) =>
-          isSameDay(
-            new Date(
-              order.timeStamp.seconds * 1000 +
-                order.timeStamp.nanoseconds / 1000000
-            ),
-            date
-          )
-        ) as unknown as OrderType[];
-        if (filteredOrder.length > 0) {
-          setOrders(filteredOrder);
-        } else {
-          setOrders(null);
-        }
-      } else {
-        toast.error(orders.message);
-      }
-    });
+    ordersObject.reload();
   }, [, date]);
 
   const onDateChange = (d?: Date) => {
@@ -87,7 +65,7 @@ function App() {
       </Popover>
 
       <OrderBox />
-  <Loader />
+      <Loader />
     </div>
   );
 }

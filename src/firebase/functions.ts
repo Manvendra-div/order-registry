@@ -1,8 +1,11 @@
+import { FirestoreOrderOutputType, OrderType } from "@/types/order.type";
 import {
-  FirestoreOrderOutputType,
-  OrderType,
-} from "@/types/order.type";
-import { collection, addDoc, getDocs } from "firebase/firestore";
+  collection,
+  addDoc,
+  getDocs,
+  doc,
+  setDoc,
+} from "firebase/firestore";
 import { db } from "./config";
 
 export const postOrder = async (order: OrderType) => {
@@ -41,3 +44,19 @@ export const getOrderList = async (): Promise<{
   }
 };
 
+export const updateOrder = async (
+  id: string,
+  order: OrderType
+): Promise<{
+  success: boolean;
+  data: null;
+  message: string | null;
+}> => {
+  try {
+    const orderRef = doc(db, "orders", id);
+    await setDoc(orderRef, order, { merge: true });
+    return { success: true, data: null, message: "Not implemented" };
+  } catch (error: any) {
+    return { success: false, data: null, message: error.message };
+  }
+};

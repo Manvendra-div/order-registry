@@ -1,6 +1,7 @@
 import { FINALITEMTYPE } from "@/types/item.type";
 
 export interface OrderType {
+  id?:string
   timeStamp: Date;
   orderId: string;
   isCash: boolean;
@@ -10,6 +11,7 @@ export interface OrderType {
   allTotal: number;
   isZomato: boolean;
   isSwiggy: boolean;
+  isPaid: boolean;
 }
 
 export interface FirestoreOrderOutputType {
@@ -26,6 +28,3 @@ export interface FirestoreOrderOutputType {
   isZomato: boolean;
   isSwiggy: boolean;
 }
-
-
-

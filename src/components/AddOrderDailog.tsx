@@ -45,6 +45,7 @@ import { Label } from "./ui/label";
 import { Checkbox } from "./ui/checkbox";
 import { MenuType } from "@/types/menu.type";
 import { Helmet } from "react-helmet";
+import useOrderList from "@/hooks/ordersList.hook";
 
 const Item = ({ data }: { data: ITEMTYPE }) => {
   return (
@@ -92,6 +93,7 @@ export default function AddOrderDailog({
     isZomato: false,
     isSwiggy: false,
   });
+const {ordersObject} = useOrderList();
 
   const setLoading = useAtom(loaderAtom)[1];
 
@@ -123,6 +125,7 @@ export default function AddOrderDailog({
       setLoading(true);
 
       postOrder({
+        isPaid:false,
         allTotal: totalAmount,
         items: foodBasket,
         name: itemNames,
@@ -140,7 +143,9 @@ export default function AddOrderDailog({
           toast.error(output.message);
           setLoading(false);
         }
-      });
+      }).finally(() => {
+        ordersObject.reload();
+      })
     } else {
       toast.error("Select Payment Method");
     }
@@ -165,7 +170,7 @@ export default function AddOrderDailog({
       )}
 
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="max-w-[80%] ">
+      <DialogContent className="sm:max-w-[80%]">
         <DialogHeader>
           <DialogTitle>
             Create a Order{" "}
@@ -282,7 +287,7 @@ export default function AddOrderDailog({
                                 <span className="capitalize font-medium text-sm">
                                   {foodItem.varients.varientName}
                                 </span>
-                                <span className="font-medium text-foreground">
+                                <span className="text-xs sm:text-sm font-medium text-foreground text-nowrap">
                                   {foodItem.name}
                                 </span>
                               </div>
