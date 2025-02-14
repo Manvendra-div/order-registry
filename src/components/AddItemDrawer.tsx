@@ -29,7 +29,6 @@ export default function AddItemDrawer({
   const [items, setItems] = useAtom(foodCartAtom);
   const [varient, setVarient] = useState<FINALITEMTYPE["varients"]>();
 
-
   useEffect(() => {
     setCount(1);
   }, [varient]);
@@ -62,17 +61,18 @@ export default function AddItemDrawer({
       <DrawerContent className="backdrop-blur-lg bg-background/60">
         <div className="mx-auto w-full max-w-sm">
           <DrawerHeader>
-            <DrawerTitle>{data.name}</DrawerTitle>
-            <DrawerDescription>
-              <SquareDot
+            <DrawerTitle className="flex items-center justify-center gap-2"><SquareDot
                 className={`stroke-3 w-4 h-4 ${
                   data.veg ? "text-green-400" : "text-red-400"
                 }`}
-              />
+              />{data.name}</DrawerTitle>
+            <DrawerDescription>
+             <span className="hidden">{data.name}</span>
             </DrawerDescription>
           </DrawerHeader>
           <div className="p-4 pb-0 flex flex-col gap-4 justify-center items-center">
             <ToggleGroup
+              key={varient?.varientId}
               value={varient?.varientName}
               onValueChange={(value: string) => {
                 const foundVarient = data.varients.find(
@@ -89,6 +89,7 @@ export default function AddItemDrawer({
             >
               {data.varients.map((varient) => (
                 <ToggleGroupItem
+                  key={varient.varientId}
                   value={varient.varientName}
                   aria-label="Toggle italic"
                   className="hover:bg-transparent"
@@ -123,7 +124,7 @@ export default function AddItemDrawer({
               </Button>
             </div>
             {varient && (
-              <div className="mt-3 h-[80px] flex gap-4 items-center justify-center text-4xl font-bold">
+              <div className="mt-3 h-10 flex gap-4 items-center justify-center text-2xl sm:text-3xl font-bold">
                 <span className="">₹{varient.price}</span> <span>*</span>{" "}
                 <span>{count}</span> = <span>₹{varient.price * count}</span>
               </div>

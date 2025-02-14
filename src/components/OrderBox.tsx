@@ -23,7 +23,7 @@ export default function OrderBox() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
   const {ordersObject} = useOrderList();
-  const [menu, setMenu] = useState<MenuType["items"] | null>(null);
+  const [menu, setMenu] = useState<MenuType["categories"] | null>(null);
 
   const todayTotal = useMemo(() => {
     return ordersObject.orderList?.reduce((total, order) => total + order.allTotal, 0);

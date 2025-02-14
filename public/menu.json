@@ -1,691 +1,1433 @@
 {
-  "items": {
-    "veg": [
-      {
-        "id": 101,
-        "name": "Shahi Paneer",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1010,
-            "varientName": "half",
-            "price": 75
-          },
-          {
-            "varientId": 1011,
-            "varientName": "full",
-            "price": 150
-          }
-        ]
-      },
-      {
-        "id": 102,
-        "name": "Paneer Butter Masala",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1020,
-            "varientName": "half",
-            "price": 75
-          },
-          {
-            "varientId": 1021,
-            "varientName": "full",
-            "price": 150
-          }
-        ]
-      },
-      {
-        "id": 103,
-        "name": "Paneer Masala",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1030,
-            "varientName": "half",
-            "price": 75
-          },
-          {
-            "varientId": 1031,
-            "varientName": "full",
-            "price": 150
-          }
-        ]
-      },
-      {
-        "id": 104,
-        "name": "Matar Paneer",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1040,
-            "varientName": "half",
-            "price": 70
-          },
-          {
-            "varientId": 1041,
-            "varientName": "full",
-            "price": 140
-          }
-        ]
-      },
-      {
-        "id": 105,
-        "name": "Chola Paneer",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1050,
-            "varientName": "half",
-            "price": 70
-          },
-          {
-            "varientId": 1051,
-            "varientName": "full",
-            "price": 140
-          }
-        ]
-      },
-      {
-        "id": 106,
-        "name": "Rajma Paneer",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1060,
-            "varientName": "half",
-            "price": 70
-          },
-          {
-            "varientId": 1061,
-            "varientName": "full",
-            "price": 140
-          }
-        ]
-      },
-      {
-        "id": 107,
-        "name": "Aloo Paneer",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1070,
-            "varientName": "half",
-            "price": 70
-          },
-          {
-            "varientId": 1071,
-            "varientName": "full",
-            "price": 140
-          }
-        ]
-      },
-      {
-        "id": 108,
-        "name": "Tamatar Paneer",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1080,
-            "varientName": "half",
-            "price": 70
-          },
-          {
-            "varientId": 1081,
-            "varientName": "full",
-            "price": 140
-          }
-        ]
-      },
-      {
-        "id": 109,
-        "name": "Palak Paneer",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1090,
-            "varientName": "half",
-            "price": 80
-          },
-          {
-            "varientId": 1091,
-            "varientName": "full",
-            "price": 160
-          }
-        ]
-      },
-      {
-        "id": 110,
-        "name": "Veg Kaleji Paneer",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1100,
-            "varientName": "half",
-            "price": 100
-          },
-          {
-            "varientId": 1101,
-            "varientName": "full",
-            "price": 200
-          }
-        ]
-      },
-      {
-        "id": 111,
-        "name": "Paneer Kali Mirch",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1110,
-            "varientName": "half",
-            "price": 110
-          },
-          {
-            "varientId": 1111,
-            "varientName": "full",
-            "price": 220
-          }
-        ]
-      },
-      {
-        "id": 112,
-        "name": "Chili Paneer",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1120,
-            "varientName": "half",
-            "price": 100
-          },
-          {
-            "varientId": 1121,
-            "varientName": "full",
-            "price": 200
-          }
-        ]
-      },
-      {
-        "id": 113,
-        "name": "Paneer Do Pyaza",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1130,
-            "varientName": "half",
-            "price": 100
-          },
-          {
-            "varientId": 1131,
-            "varientName": "full",
-            "price": 200
-          }
-        ]
-      },
-      {
-        "id": 114,
-        "name": "Kadhai Paneer",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1140,
-            "varientName": "half",
-            "price": 85
-          },
-          {
-            "varientId": 1141,
-            "varientName": "full",
-            "price": 170
-          }
-        ]
-      },
-      {
-        "id": 115,
-        "name": "Handi Paneer",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1150,
-            "varientName": "half",
-            "price": 85
-          },
-          {
-            "varientId": 1151,
-            "varientName": "full",
-            "price": 170
-          }
-        ]
-      },
-      {
-        "id": 116,
-        "name": "Khoya Paneer",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1160,
-            "varientName": "half",
-            "price": 90
-          },
-          {
-            "varientId": 1161,
-            "varientName": "full",
-            "price": 180
-          }
-        ]
-      },
-      {
-        "id": 117,
-        "name": "Aloo Matar",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1170,
-            "varientName": "half",
-            "price": 50
-          },
-          {
-            "varientId": 1171,
-            "varientName": "full",
-            "price": 100
-          }
-        ]
-      },
-      {
-        "id": 118,
-        "name": "Matar Mushroom",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1180,
-            "varientName": "half",
-            "price": 85
-          },
-          {
-            "varientId": 1181,
-            "varientName": "full",
-            "price": 170
-          }
-        ]
-      },
-      {
-        "id": 119,
-        "name": "Aloo Chola",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1190,
-            "varientName": "half",
-            "price": 50
-          },
-          {
-            "varientId": 1191,
-            "varientName": "full",
-            "price": 100
-          }
-        ]
-      },
-      {
-        "id": 120,
-        "name": "Aloo Rajma",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1200,
-            "varientName": "half",
-            "price": 50
-          },
-          {
-            "varientId": 1201,
-            "varientName": "full",
-            "price": 100
-          }
-        ]
-      },
-      {
-        "id": 121,
-        "name": "Aloo Gobhi",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1210,
-            "varientName": "half",
-            "price": 50
-          },
-          {
-            "varientId": 1211,
-            "varientName": "full",
-            "price": 100
-          }
-        ]
-      },
-      {
-        "id": 122,
-        "name": "Aloo Jeera",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1220,
-            "varientName": "half",
-            "price": 50
-          },
-          {
-            "varientId": 1221,
-            "varientName": "full",
-            "price": 100
-          }
-        ]
-      },
-      {
-        "id": 123,
-        "name": "Aloo Tamatar",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1230,
-            "varientName": "half",
-            "price": 50
-          },
-          {
-            "varientId": 1231,
-            "varientName": "full",
-            "price": 100
-          }
-        ]
-      },
-      {
-        "id": 124,
-        "name": "Aloo Dum",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1240,
-            "varientName": "half",
-            "price": 75
-          },
-          {
-            "varientId": 1241,
-            "varientName": "full",
-            "price": 150
-          }
-        ]
-      },
-      {
-        "id": 125,
-        "name": "Aloo Dum Kashmiri",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1250,
-            "varientName": "half",
-            "price": 90
-          },
-          {
-            "varientId": 1251,
-            "varientName": "full",
-            "price": 180
-          }
-        ]
-      },
-      {
-        "id": 126,
-        "name": "Mix Veg",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1260,
-            "varientName": "half",
-            "price": 70
-          },
-          {
-            "varientId": 1261,
-            "varientName": "full",
-            "price": 140
-          }
-        ]
-      },
-      {
-        "id": 127,
-        "name": "Seasonal Sabji",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1270,
-            "varientName": "half",
-            "price": 50
-          },
-          {
-            "varientId": 1271,
-            "varientName": "full",
-            "price": 100
-          }
-        ]
-      },
-      {
-        "id": 128,
-        "name": "Baingan Bharta",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 1280,
-            "varientName": "half",
-            "price": 50
-          },
-          {
-            "varientId": 1281,
-            "varientName": "full",
-            "price": 100
-          }
-        ]
-      }
-    ],
-    "accompaniments": [
-      {
-        "id": 201,
-        "name": "Chicken Maharaja",
-        "veg": false,
-        "varients": [
-          {
-            "varientId": 2010,
-            "varientName": "half",
-            "price": 50
-          },
-          {
-            "varientId": 2011,
-            "varientName": "full",
-            "price": 100
-          }
-        ]
-      }
-    ],
-    "nonVeg": [
-      {
-        "id": 301,
-        "name": "Chicken Maharaja",
-        "veg": false,
-        "varients": [
-          {
-            "varientId": 3010,
-            "varientName": "quarter",
-            "price": 180
-          },
-          {
-            "varientId": 3011,
-            "varientName": "half",
-            "price": 360
-          },
-          {
-            "varientId": 3012,
-            "varientName": "full",
-            "price": 720
-          }
-        ]
-      }
-    ],
-    "snacks": [
-      {
-        "id": 401,
-        "name": "Tandoori Chicken",
-        "veg": false,
-        "varients": [
-          {
-            "varientId": 4010,
-            "varientName": "quarter",
-            "price": 100
-          },
-          {
-            "varientId": 4011,
-            "varientName": "half",
-            "price": 200
-          },
-          {
-            "varientId": 4012,
-            "varientName": "full",
-            "price": 400
-          }
-        ]
-      },
-      {
-        "id": 401,
-        "name": "Chicken Kali Mirch",
-        "veg": false,
-        "varients": [
-          {
-            "varientId": 4020,
-            "varientName": "quarter",
-            "price": 120
-          },
-          {
-            "varientId": 4021,
-            "varientName": "half",
-            "price": 220
-          },
-          {
-            "varientId": 4022,
-            "varientName": "full",
-            "price": 430
-          }
-        ]
-      },
-      {
-        "id": 403,
-        "name": "Chicken Tikka Rice",
-        "veg": false,
-        "varients": [
-          {
-            "varientId": 4030,
-            "varientName": "plate",
-            "price": 160
-          }
-        ]
-      },
-      {
-        "id": 404,
-        "name": "Chicken Tikka",
-        "veg": false,
-        "varients": [
-          {
-            "varientId": 4040,
-            "varientName": "plate",
-            "price": 200
-          }
-        ]
-      },
-      {
-        "id": 405,
-        "name": "Chicken Tikka Kali Mirch",
-        "veg": false,
-        "varients": [
-          {
-            "varientId": 4050,
-            "varientName": "plate",
-            "price": 220
-          }
-        ]
-      },
-      {
-        "id": 406,
-        "name": "Chicken Malai Tikka",
-        "veg": false,
-        "varients": [
-          {
-            "varientId": 4060,
-            "varientName": "plate",
-            "price": 210
-          }
-        ]
-      },
-      {
-        "id": 407,
-        "name": "Chicken Seekh kebab",
-        "veg": false,
-        "varients": [
-          {
-            "varientId": 4070,
-            "varientName": "plate",
-            "price": 200
-          }
-        ]
-      },
-      {
-        "id": 408,
-        "name": "Fish Tikka",
-        "veg": false,
-        "varients": [
-          {
-            "varientId": 4080,
-            "varientName": "plate",
-            "price": 190
-          }
-        ]
-      },
-      {
-        "id": 409,
-        "name": "Fish Tikka Zafrani",
-        "veg": false,
-        "varients": [
-          {
-            "varientId": 4090,
-            "varientName": "plate",
-            "price": 200
-          }
-        ]
-      },
-      {
-        "id": 410,
-        "name": "Paneer Tikka",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 4100,
-            "varientName": "plate",
-            "price": 160
-          }
-        ]
-      },
-      {
-        "id": 411,
-        "name": "Paneer Tikka Kali Mirch",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 4110,
-            "varientName": "plate",
-            "price": 170
-          }
-        ]
-      },
-      {
-        "id": 412,
-        "name": "Paneer Malai Tikka",
-        "veg": true,
-        "varients": [
-          {
-            "varientId": 4120,
-            "varientName": "plate",
-            "price": 190
-          }
-        ]
-      }
-    ]
-  }
+  "categories": [
+    {
+      "id": 100,
+      "title": "Veg Main Course",
+      "items": [
+        {
+          "id": 101,
+          "name": "Shahi Paneer",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1010,
+              "varientName": "half",
+              "price": 75
+            },
+            {
+              "varientId": 1011,
+              "varientName": "full",
+              "price": 150
+            }
+          ]
+        },
+        {
+          "id": 102,
+          "name": "Paneer Butter Masala",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1020,
+              "varientName": "half",
+              "price": 75
+            },
+            {
+              "varientId": 1021,
+              "varientName": "full",
+              "price": 150
+            }
+          ]
+        },
+        {
+          "id": 103,
+          "name": "Paneer Masala",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1030,
+              "varientName": "half",
+              "price": 75
+            },
+            {
+              "varientId": 1031,
+              "varientName": "full",
+              "price": 150
+            }
+          ]
+        },
+        {
+          "id": 104,
+          "name": "Matar Paneer",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1040,
+              "varientName": "half",
+              "price": 70
+            },
+            {
+              "varientId": 1041,
+              "varientName": "full",
+              "price": 140
+            }
+          ]
+        },
+        {
+          "id": 105,
+          "name": "Chola Paneer",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1050,
+              "varientName": "half",
+              "price": 70
+            },
+            {
+              "varientId": 1051,
+              "varientName": "full",
+              "price": 140
+            }
+          ]
+        },
+        {
+          "id": 106,
+          "name": "Rajma Paneer",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1060,
+              "varientName": "half",
+              "price": 70
+            },
+            {
+              "varientId": 1061,
+              "varientName": "full",
+              "price": 140
+            }
+          ]
+        },
+        {
+          "id": 107,
+          "name": "Aloo Paneer",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1070,
+              "varientName": "half",
+              "price": 70
+            },
+            {
+              "varientId": 1071,
+              "varientName": "full",
+              "price": 140
+            }
+          ]
+        },
+        {
+          "id": 108,
+          "name": "Tamatar Paneer",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1080,
+              "varientName": "half",
+              "price": 70
+            },
+            {
+              "varientId": 1081,
+              "varientName": "full",
+              "price": 140
+            }
+          ]
+        },
+        {
+          "id": 109,
+          "name": "Palak Paneer",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1090,
+              "varientName": "half",
+              "price": 80
+            },
+            {
+              "varientId": 1091,
+              "varientName": "full",
+              "price": 160
+            }
+          ]
+        },
+        {
+          "id": 110,
+          "name": "Veg Kaleji Paneer",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1100,
+              "varientName": "half",
+              "price": 100
+            },
+            {
+              "varientId": 1101,
+              "varientName": "full",
+              "price": 200
+            }
+          ]
+        },
+        {
+          "id": 111,
+          "name": "Paneer Kali Mirch",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1110,
+              "varientName": "half",
+              "price": 110
+            },
+            {
+              "varientId": 1111,
+              "varientName": "full",
+              "price": 220
+            }
+          ]
+        },
+        {
+          "id": 112,
+          "name": "Chilli Paneer",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1120,
+              "varientName": "half",
+              "price": 100
+            },
+            {
+              "varientId": 1121,
+              "varientName": "full",
+              "price": 200
+            }
+          ]
+        },
+        {
+          "id": 113,
+          "name": "Paneer Do Pyaza",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1130,
+              "varientName": "half",
+              "price": 100
+            },
+            {
+              "varientId": 1131,
+              "varientName": "full",
+              "price": 200
+            }
+          ]
+        },
+        {
+          "id": 114,
+          "name": "Kadhai Paneer",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1140,
+              "varientName": "half",
+              "price": 85
+            },
+            {
+              "varientId": 1141,
+              "varientName": "full",
+              "price": 170
+            }
+          ]
+        },
+        {
+          "id": 115,
+          "name": "Handi Paneer",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1150,
+              "varientName": "half",
+              "price": 85
+            },
+            {
+              "varientId": 1151,
+              "varientName": "full",
+              "price": 170
+            }
+          ]
+        },
+        {
+          "id": 116,
+          "name": "Khoya Paneer",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1160,
+              "varientName": "half",
+              "price": 90
+            },
+            {
+              "varientId": 1161,
+              "varientName": "full",
+              "price": 180
+            }
+          ]
+        },
+        {
+          "id": 117,
+          "name": "Aloo Matar",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1170,
+              "varientName": "half",
+              "price": 50
+            },
+            {
+              "varientId": 1171,
+              "varientName": "full",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": 118,
+          "name": "Matar Mushroom",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1180,
+              "varientName": "half",
+              "price": 85
+            },
+            {
+              "varientId": 1181,
+              "varientName": "full",
+              "price": 170
+            }
+          ]
+        },
+        {
+          "id": 119,
+          "name": "Aloo Chola",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1190,
+              "varientName": "half",
+              "price": 50
+            },
+            {
+              "varientId": 1191,
+              "varientName": "full",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": 120,
+          "name": "Aloo Rajma",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1200,
+              "varientName": "half",
+              "price": 50
+            },
+            {
+              "varientId": 1201,
+              "varientName": "full",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": 121,
+          "name": "Aloo Gobhi",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1210,
+              "varientName": "half",
+              "price": 50
+            },
+            {
+              "varientId": 1211,
+              "varientName": "full",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": 122,
+          "name": "Aloo Jeera",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1220,
+              "varientName": "half",
+              "price": 50
+            },
+            {
+              "varientId": 1221,
+              "varientName": "full",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": 123,
+          "name": "Aloo Tamatar",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1230,
+              "varientName": "half",
+              "price": 50
+            },
+            {
+              "varientId": 1231,
+              "varientName": "full",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": 124,
+          "name": "Aloo Dum",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1240,
+              "varientName": "half",
+              "price": 75
+            },
+            {
+              "varientId": 1241,
+              "varientName": "full",
+              "price": 150
+            }
+          ]
+        },
+        {
+          "id": 125,
+          "name": "Aloo Dum Kashmiri",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1250,
+              "varientName": "half",
+              "price": 90
+            },
+            {
+              "varientId": 1251,
+              "varientName": "full",
+              "price": 180
+            }
+          ]
+        },
+        {
+          "id": 126,
+          "name": "Mix Veg",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1260,
+              "varientName": "half",
+              "price": 70
+            },
+            {
+              "varientId": 1261,
+              "varientName": "full",
+              "price": 140
+            }
+          ]
+        },
+        {
+          "id": 127,
+          "name": "Seasonal Sabji",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1270,
+              "varientName": "half",
+              "price": 50
+            },
+            {
+              "varientId": 1271,
+              "varientName": "full",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": 128,
+          "name": "Baingan Bharta",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1280,
+              "varientName": "half",
+              "price": 70
+            },
+            {
+              "varientId": 1281,
+              "varientName": "full",
+              "price": 140
+            }
+          ]
+        },
+        {
+          "id": 129,
+          "name": "Dal Fry",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1290,
+              "varientName": "half",
+              "price": 50
+            },
+            {
+              "varientId": 1291,
+              "varientName": "full",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": 130,
+          "name": "Dal Fry Special",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1300,
+              "varientName": "half",
+              "price": 70
+            },
+            {
+              "varientId": 1301,
+              "varientName": "full",
+              "price": 140
+            }
+          ]
+        },
+        {
+          "id": 131,
+          "name": "Dal Tadka",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1310,
+              "varientName": "half",
+              "price": 70
+            },
+            {
+              "varientId": 1311,
+              "varientName": "full",
+              "price": 140
+            }
+          ]
+        },
+        {
+          "id": 132,
+          "name": "Dal Fry Jeera Se",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1320,
+              "varientName": "half",
+              "price": 50
+            },
+            {
+              "varientId": 1321,
+              "varientName": "full",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": 133,
+          "name": "Dal Fry Butter Se",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 1330,
+              "varientName": "half",
+              "price": 70
+            },
+            {
+              "varientId": 1331,
+              "varientName": "full",
+              "price": 140
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 200,
+      "title": "Accompaniments",
+      "items": [
+        {
+          "id": 201,
+          "name": "Dry Papad",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 2010,
+              "varientName": "piece",
+              "price": 20
+            }
+          ]
+        },
+        {
+          "id": 202,
+          "name": "Fry Papad",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 2020,
+              "varientName": "piece",
+              "price": 25
+            }
+          ]
+        },
+        {
+          "id": 203,
+          "name": "Masala Papad",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 2030,
+              "varientName": "piece",
+              "price": 35
+            }
+          ]
+        },
+        {
+          "id": 204,
+          "name": "Boondi Raita",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 2040,
+              "varientName": "piece",
+              "price": 30
+            }
+          ]
+        },
+        {
+          "id": 205,
+          "name": "Mix Raita",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 2050,
+              "varientName": "piece",
+              "price": 50
+            }
+          ]
+        },
+        {
+          "id": 206,
+          "name": "Aloo Raita",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 2060,
+              "varientName": "piece",
+              "price": 30
+            }
+          ]
+        },
+        {
+          "id": 207,
+          "name": "Kheera Raita",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 2070,
+              "varientName": "piece",
+              "price": 35
+            }
+          ]
+        },
+        {
+          "id": 208,
+          "name": "Pyaz Raita",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 2080,
+              "varientName": "piece",
+              "price": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 300,
+      "title": "Non-Veg Main Course",
+      "items": [
+        {
+          "id": 301,
+          "name": "Chicken Maharaja",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 3010,
+              "varientName": "quarter",
+              "price": 180
+            },
+            {
+              "varientId": 3011,
+              "varientName": "half",
+              "price": 360
+            },
+            {
+              "varientId": 3012,
+              "varientName": "full",
+              "price": 720
+            }
+          ]
+        },
+        {
+          "id": 302,
+          "name": "Chicken Curry",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 3020,
+              "varientName": "quarter",
+              "price": 110
+            },
+            {
+              "varientId": 3021,
+              "varientName": "half",
+              "price": 220
+            },
+            {
+              "varientId": 3022,
+              "varientName": "full",
+              "price": 440
+            }
+          ]
+        },
+        {
+          "id": 303,
+          "name": "Butter Chicken",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 3030,
+              "varientName": "quarter",
+              "price": 130
+            },
+            {
+              "varientId": 3031,
+              "varientName": "half",
+              "price": 260
+            },
+            {
+              "varientId": 3032,
+              "varientName": "full",
+              "price": 520
+            }
+          ]
+        },
+        {
+          "id": 304,
+          "name": "Chicken Masala",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 3040,
+              "varientName": "quarter",
+              "price": 130
+            },
+            {
+              "varientId": 3041,
+              "varientName": "half",
+              "price": 260
+            },
+            {
+              "varientId": 3042,
+              "varientName": "full",
+              "price": 520
+            }
+          ]
+        },
+        {
+          "id": 305,
+          "name": "Chicken Do Pyaza",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 3050,
+              "varientName": "quarter",
+              "price": 170
+            },
+            {
+              "varientId": 3051,
+              "varientName": "half",
+              "price": 340
+            },
+            {
+              "varientId": 3052,
+              "varientName": "full",
+              "price": 680
+            }
+          ]
+        },
+        {
+          "id": 306,
+          "name": "Chicken Kadhai",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 3060,
+              "varientName": "quarter",
+              "price": 140
+            },
+            {
+              "varientId": 3061,
+              "varientName": "half",
+              "price": 280
+            },
+            {
+              "varientId": 3062,
+              "varientName": "full",
+              "price": 560
+            }
+          ]
+        },
+        {
+          "id": 307,
+          "name": "Chicken Handi",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 3070,
+              "varientName": "quarter",
+              "price": 140
+            },
+            {
+              "varientId": 3071,
+              "varientName": "half",
+              "price": 380
+            },
+            {
+              "varientId": 3072,
+              "varientName": "full",
+              "price": 680
+            }
+          ]
+        },
+        {
+          "id": 308,
+          "name": "Fried Chicken",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 3080,
+              "varientName": "quarter",
+              "price": 100
+            },
+            {
+              "varientId": 3081,
+              "varientName": "half",
+              "price": 200
+            },
+            {
+              "varientId": 3082,
+              "varientName": "full",
+              "price": 400
+            }
+          ]
+        },
+        {
+          "id": 309,
+          "name": "Leg Curry",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 3090,
+              "varientName": "Plate [1 legs + 2 piece]",
+              "price": 120
+            }
+          ]
+        },
+        {
+          "id": 310,
+          "name": "Tandoori Chicken Leg",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 3100,
+              "varientName": "Plate [1 legs]",
+              "price": 110
+            }
+          ]
+        },
+        {
+          "id": 311,
+          "name": "Chilli Chicken",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 3110,
+              "varientName": "quarter",
+              "price": 180
+            },
+            {
+              "varientId": 3111,
+              "varientName": "half",
+              "price": 360
+            },
+            {
+              "varientId": 3112,
+              "varientName": "full",
+              "price": 720
+            }
+          ]
+        },
+        {
+          "id": 312,
+          "name": "Fish Curry",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 3120,
+              "varientName": "half",
+              "price": 100
+            },
+            {
+              "varientId": 3121,
+              "varientName": "full",
+              "price": 200
+            }
+          ]
+        },
+        {
+          "id": 313,
+          "name": "Fish Masala",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 3130,
+              "varientName": "half",
+              "price": 120
+            },
+            {
+              "varientId": 3131,
+              "varientName": "full",
+              "price": 240
+            }
+          ]
+        },
+        {
+          "id": 314,
+          "name": "Fish Do Pyaza",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 3140,
+              "varientName": "half",
+              "price": 130
+            },
+            {
+              "varientId": 3141,
+              "varientName": "full",
+              "price": 260
+            }
+          ]
+        },
+        {
+          "id": 315,
+          "name": "Fish Fry",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 3150,
+              "varientName": "half",
+              "price": 100
+            },
+            {
+              "varientId": 3151,
+              "varientName": "full",
+              "price": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 400,
+      "title": "Snacks",
+      "items": [
+        {
+          "id": 401,
+          "name": "Tandoori Chicken",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 4010,
+              "varientName": "quarter",
+              "price": 100
+            },
+            {
+              "varientId": 4011,
+              "varientName": "half",
+              "price": 200
+            },
+            {
+              "varientId": 4012,
+              "varientName": "full",
+              "price": 400
+            }
+          ]
+        },
+        {
+          "id": 402,
+          "name": "Chicken Kali Mirch",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 4020,
+              "varientName": "quarter",
+              "price": 120
+            },
+            {
+              "varientId": 4021,
+              "varientName": "half",
+              "price": 220
+            },
+            {
+              "varientId": 4022,
+              "varientName": "full",
+              "price": 430
+            }
+          ]
+        },
+        {
+          "id": 403,
+          "name": "Chicken Tikka Rice",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 4030,
+              "varientName": "plate",
+              "price": 160
+            }
+          ]
+        },
+        {
+          "id": 404,
+          "name": "Chicken Tikka",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 4040,
+              "varientName": "plate",
+              "price": 200
+            }
+          ]
+        },
+        {
+          "id": 405,
+          "name": "Chicken Tikka Kali Mirch",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 4050,
+              "varientName": "plate",
+              "price": 220
+            }
+          ]
+        },
+        {
+          "id": 406,
+          "name": "Chicken Malai Tikka",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 4060,
+              "varientName": "plate",
+              "price": 210
+            }
+          ]
+        },
+        {
+          "id": 407,
+          "name": "Chicken Seekh kebab",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 4070,
+              "varientName": "plate",
+              "price": 200
+            }
+          ]
+        },
+        {
+          "id": 408,
+          "name": "Fish Tikka",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 4080,
+              "varientName": "plate",
+              "price": 190
+            }
+          ]
+        },
+        {
+          "id": 409,
+          "name": "Fish Tikka Zafrani",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 4090,
+              "varientName": "plate",
+              "price": 200
+            }
+          ]
+        },
+        {
+          "id": 410,
+          "name": "Paneer Tikka",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 4100,
+              "varientName": "plate",
+              "price": 160
+            }
+          ]
+        },
+        {
+          "id": 411,
+          "name": "Paneer Tikka Kali Mirch",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 4110,
+              "varientName": "plate",
+              "price": 170
+            }
+          ]
+        },
+        {
+          "id": 412,
+          "name": "Paneer Malai Tikka",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 4120,
+              "varientName": "plate",
+              "price": 190
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 500,
+      "title": "Egg Dishes",
+      "items": [
+        {
+          "id": 501,
+          "name": "Egg Bhujiya",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 5010,
+              "varientName": "half",
+              "price": 50
+            },
+            {
+              "varientId": 5011,
+              "varientName": "full",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": 502,
+          "name": "Egg Curry",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 5020,
+              "varientName": "half [2 eggs]",
+              "price": 70
+            },
+            {
+              "varientId": 5021,
+              "varientName": "full [4 eggs]",
+              "price": 140
+            }
+          ]
+        },
+        {
+          "id": 503,
+          "name": "Egg Masala",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 5030,
+              "varientName": "half [2 eggs]",
+              "price": 90
+            },
+            {
+              "varientId": 5031,
+              "varientName": "full [4 eggs]",
+              "price": 180
+            }
+          ]
+        },
+        {
+          "id": 504,
+          "name": "Egg Do Pyaza",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 5040,
+              "varientName": "half [2 eggs]",
+              "price": 100
+            },
+            {
+              "varientId": 5041,
+              "varientName": "full [4 eggs]",
+              "price": 200
+            }
+          ]
+        },
+        {
+          "id": 505,
+          "name": "Omellete",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 5050,
+              "varientName": "half [2 eggs]",
+              "price": 50
+            },
+            {
+              "varientId": 5051,
+              "varientName": "full [4 eggs]",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": 506,
+          "name": "Omellete Curry",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 5060,
+              "varientName": "half [2 eggs]",
+              "price": 90
+            },
+            {
+              "varientId": 5061,
+              "varientName": "full [4 eggs]",
+              "price": 180
+            }
+          ]
+        },
+        {
+          "id": 507,
+          "name": "Bhujiya Curry",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 5070,
+              "varientName": "half [2 eggs]",
+              "price": 90
+            },
+            {
+              "varientId": 5071,
+              "varientName": "full [4 eggs]",
+              "price": 180
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 500,
+      "title": "Biryanis",
+      "items": [
+        {
+          "id": 501,
+          "name": "Chicken Biryani With Gravy",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 5010,
+              "varientName": "half",
+              "price": 80
+            },
+            {
+              "varientId": 5011,
+              "varientName": "full",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": 502,
+          "name": "Chicken Leg Biryani With Gravy",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 5020,
+              "varientName": "Plate [1 legs + 2 piece]",
+              "price": 120
+            }
+          ]
+        },
+        {
+          "id": 503,
+          "name": "Egg Biryani",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 5030,
+              "varientName": "half",
+              "price": 60
+            },
+            {
+              "varientId": 5031,
+              "varientName": "full",
+              "price": 80
+            }
+          ]
+        },
+        {
+          "id": 504,
+          "name": "Veg Biryani",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 5040,
+              "varientName": "half",
+              "price": 60
+            },
+            {
+              "varientId": 5041,
+              "varientName": "full",
+              "price": 80
+            }
+          ]
+        },
+        {
+          "id": 505,
+          "name": "Chicken Fried Rice",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 5050,
+              "varientName": "half",
+              "price": 80
+            },
+            {
+              "varientId": 5051,
+              "varientName": "full",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": 506,
+          "name": "Egg Fried Rice",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 5060,
+              "varientName": "half [1 egg]",
+              "price": 60
+            },
+            {
+              "varientId": 5061,
+              "varientName": "full [2 egg]",
+              "price": 120
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 600,
+      "title": "Breads",
+      "items": [
+        {
+          "id": 601,
+          "name": "Tandoori Roti",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 6010,
+              "varientName": "piece",
+              "price": 5
+            }
+          ]
+        },
+        {
+          "id": 602,
+          "name": "Tandoori Roti Butter Se",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 6020,
+              "varientName": "piece",
+              "price": 7
+            }
+          ]
+        },
+        {
+          "id": 603,
+          "name": "Tawa Roti",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 6030,
+              "varientName": "piece",
+              "price": 5
+            }
+          ]
+        },
+        {
+          "id": 604,
+          "name": "Tawa Roti Butter Se",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 6040,
+              "varientName": "piece",
+              "price": 7
+            }
+          ]
+        },
+        {
+          "id": 605,
+          "name": "Plain Naan",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 6050,
+              "varientName": "piece",
+              "price": 20
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

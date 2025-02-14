@@ -49,7 +49,7 @@ import useOrderList from "@/hooks/ordersList.hook";
 
 const Item = ({ data }: { data: ITEMTYPE }) => {
   return (
-    <div className="bg-secondary/80 rounded-md px-3 py-2 w-full lg:w-fit min-w-44 flex flex-col justify-between gap-4 hover:bg-secondary/60 h-fit">
+    <div className="z-0 bg-secondary/80 rounded-md px-3 py-2 w-full lg:w-fit min-w-44 flex flex-col justify-between gap-4 hover:bg-secondary/60 h-fit">
       <div className="flex items-center justify-between gap-4">
         <span className="text-sm font-bold">{data.name}</span>
         <SquareDot
@@ -78,7 +78,7 @@ export default function AddOrderDailog({
   MenuItem,
 }: {
   children: ReactNode;
-  MenuItem: MenuType["items"];
+  MenuItem: MenuType["categories"];
 }) {
   const [open, setOpen] = useState<boolean>(false);
   const [foodBasket, setFoodBasket] = useAtom(foodCartAtom);
@@ -93,7 +93,7 @@ export default function AddOrderDailog({
     isZomato: false,
     isSwiggy: false,
   });
-const {ordersObject} = useOrderList();
+  const { ordersObject } = useOrderList();
 
   const setLoading = useAtom(loaderAtom)[1];
 
@@ -109,7 +109,7 @@ const {ordersObject} = useOrderList();
     return (
       foodBasket?.reduce(
         (total, item) => total + item.quantity * item.varients.price,
-        0
+        0,
       ) || 0
     );
   }, [foodBasket]);
@@ -125,7 +125,7 @@ const {ordersObject} = useOrderList();
       setLoading(true);
 
       postOrder({
-        isPaid:false,
+        isPaid: false,
         allTotal: totalAmount,
         items: foodBasket,
         name: itemNames,
@@ -134,18 +134,20 @@ const {ordersObject} = useOrderList();
         timeStamp: new Date(),
         isSwiggy: onlinePartners.isSwiggy,
         isZomato: onlinePartners.isZomato,
-      }).then((output) => {
-        if (output.success) {
-          toast.success(output.message);
-          setLoading(false);
-          setOpen(false);
-        } else {
-          toast.error(output.message);
-          setLoading(false);
-        }
-      }).finally(() => {
-        ordersObject.reload();
       })
+        .then((output) => {
+          if (output.success) {
+            toast.success(output.message);
+            setLoading(false);
+            setOpen(false);
+          } else {
+            toast.error(output.message);
+            setLoading(false);
+          }
+        })
+        .finally(() => {
+          ordersObject.reload();
+        });
     } else {
       toast.error("Select Payment Method");
     }
@@ -221,45 +223,33 @@ const {ordersObject} = useOrderList();
                   </div>
                   <ScrollArea className="w-full h-[400px] relative pb-10">
                     <div className="absolute top-0 w-full bg-gradient-to-b from-background/60 to-transparent z-10 h-10" />
-                    <div className="absolute bottom-0 w-full bg-gradient-to-t from-background/60 to-transparent z-10 h-10" />
                     <div className="w-full flex flex-col gap-8 h-full p-4">
-                      <div className="flex flex-col gap-4">
-                        <span className="leading-tight text-2xl font-medium">
-                          Veg Main Course
-                        </span>
-                        <div className="flex flex-wrap gap-4 w-full min-h-[200px]">
-                          {MenuItem.veg
-                            .filter((item) => item.name.includes(searchInput))
-                            .map((item) => (
-                              <Item data={item} key={item.id} />
-                            ))}
-                        </div>
-                      </div>
-                      <div className="flex flex-col gap-4">
-                        <span className="leading-tight text-2xl font-medium">
-                          Non-Veg Main Course
-                        </span>
-                        <div className="flex flex-wrap gap-4 w-full min-h-[200px]">
-                          {MenuItem.nonVeg
-                            .filter((item) => item.name.includes(searchInput))
-                            .map((item) => (
-                              <Item data={item} key={item.id} />
-                            ))}
-                        </div>
-                      </div>
-                      <div className="flex flex-col gap-4">
-                        <span className="leading-tight text-2xl font-medium">
-                          Snacks
-                        </span>
-                        <div className="flex flex-wrap gap-4 w-full min-h-[200px]">
-                          {MenuItem.snacks
-                            .filter((item) => item.name.includes(searchInput))
-                            .map((item, index) => (
-                              <Item data={item} key={index} />
-                            ))}
-                        </div>
-                      </div>
+                      {MenuItem.map(
+                        (category) =>
+                          category.items.filter((item) =>
+                            item.name.includes(searchInput),
+                          ).length > 0 && (
+                            <div
+                              key={category.id}
+                              className="flex flex-col gap-4"
+                            >
+                              <span className="leading-tight text-2xl font-medium">
+                                {category.title}
+                              </span>
+                              <div className="flex flex-wrap gap-4 w-full">
+                                {category.items
+                                  .filter((item) =>
+                                    item.name.includes(searchInput),
+                                  )
+                                  .map((item) => (
+                                    <Item data={item} key={item.id} />
+                                  ))}
+                              </div>
+                            </div>
+                          ),
+                      )}
                     </div>
+                    <div className="absolute bottom-0 w-full bg-gradient-to-t from-background/60 to-transparent z-20 h-10" />
                   </ScrollArea>
                 </div>
               </motion.div>
