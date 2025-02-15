@@ -1497,11 +1497,16 @@
           "varients": [
             {
               "varientId": 9010,
+              "varientName": "quarter",
+              "price": 15
+            },
+            {
+              "varientId": 9011,
               "varientName": "half",
               "price": 25
             },
             {
-              "varientId": 9011,
+              "varientId": 9012,
               "varientName": "full",
               "price": 50
             }
