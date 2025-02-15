@@ -22,11 +22,14 @@ export default function OrderBox() {
   const { theme } = useTheme();
   const containerRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
-  const {ordersObject} = useOrderList();
+  const { ordersObject } = useOrderList();
   const [menu, setMenu] = useState<MenuType["categories"] | null>(null);
 
   const todayTotal = useMemo(() => {
-    return ordersObject.orderList?.reduce((total, order) => total + order.allTotal, 0);
+    return ordersObject.orderList?.reduce(
+      (total, order) => total + order.allTotal,
+      0,
+    );
   }, [ordersObject.orderList]);
 
   useEffect(() => {
@@ -78,8 +81,8 @@ export default function OrderBox() {
             </div>
           </motion.div>
 
-          <ScrollArea className="w-full h-full pb-16">
-            <div className="p-4 flex flex-col gap-4">
+          <ScrollArea className="w-full h-full">
+            <div className="p-4 flex flex-col gap-4 pb-32">
               <h4 className="mb-4 text-sm font-semibold leading-none">
                 Orders
               </h4>
@@ -101,7 +104,16 @@ export default function OrderBox() {
         </div>
         <div className="flex items-center justify-between p-4 backdrop-blur-lg bg-secondary/20 w-full rounded-b-md border-t">
           <ToggleGroup
-            type="multiple"
+            onValueChange={(mediater) => {
+              if (mediater === "zomato") {
+                ordersObject.setConstraints(true, false);
+              } else if (mediater === "swiggy") {
+                ordersObject.setConstraints(false, true);
+              } else {
+                ordersObject.reload();
+              }
+            }}
+            type="single"
             className="w-[40%] flex justify-between items-center"
           >
             <ToggleGroupItem value="zomato" aria-label="Toggle italic">

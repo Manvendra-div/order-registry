@@ -1470,6 +1470,148 @@
           ]
         }
       ]
+    },
+    {
+      "id": 900,
+      "title": "Rice",
+      "items": [
+        {
+          "id": 901,
+          "name": "Plain Rice",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 9010,
+              "varientName": "half",
+              "price": 25
+            },
+            {
+              "varientId": 9011,
+              "varientName": "full",
+              "price": 50
+            }
+          ]
+        },
+        {
+          "id": 902,
+          "name": "Jeera Rice",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 9020,
+              "varientName": "half",
+              "price": 45
+            },
+            {
+              "varientId": 9021,
+              "varientName": "full",
+              "price": 90
+            }
+          ]
+        },
+        {
+          "id": 903,
+          "name": "Matar Pulao",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 9030,
+              "varientName": "half",
+              "price": 60
+            },
+            {
+              "varientId": 9031,
+              "varientName": "full",
+              "price": 120
+            }
+          ]
+        },
+        {
+          "id": 904,
+          "name": "Veg Pulao",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 9040,
+              "varientName": "half",
+              "price": 60
+            },
+            {
+              "varientId": 9041,
+              "varientName": "full",
+              "price": 120
+            }
+          ]
+        },
+        {
+          "id": 905,
+          "name": "Paneer Pulao",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 9010,
+              "varientName": "half",
+              "price": 75
+            },
+            {
+              "varientId": 9011,
+              "varientName": "full",
+              "price": 150
+            }
+          ]
+        },
+        {
+          "id": 906,
+          "name": "Fried Rice",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 9060,
+              "varientName": "half",
+              "price": 50
+            },
+            {
+              "varientId": 9061,
+              "varientName": "full",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": 907,
+          "name": "Paneer Fried Rice",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 9070,
+              "varientName": "half",
+              "price": 70
+            },
+            {
+              "varientId": 9071,
+              "varientName": "full",
+              "price": 140
+            }
+          ]
+        },
+        {
+          "id": 908,
+          "name": "Dal Chawal Mix",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 9080,
+              "varientName": "half",
+              "price": 60
+            },
+            {
+              "varientId": 9081,
+              "varientName": "full",
+              "price": 120
+            }
+          ]
+        }
+      ]
     }
   ]
 }
