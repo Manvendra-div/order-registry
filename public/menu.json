@@ -1261,109 +1261,6 @@
       ]
     },
     {
-      "id": 500,
-      "title": "Biryanis",
-      "items": [
-        {
-          "id": 501,
-          "name": "Chicken Biryani With Gravy",
-          "veg": false,
-          "varients": [
-            {
-              "varientId": 5010,
-              "varientName": "half",
-              "price": 80
-            },
-            {
-              "varientId": 5011,
-              "varientName": "full",
-              "price": 100
-            }
-          ]
-        },
-        {
-          "id": 502,
-          "name": "Chicken Leg Biryani With Gravy",
-          "veg": false,
-          "varients": [
-            {
-              "varientId": 5020,
-              "varientName": "Plate [1 legs + 2 piece]",
-              "price": 120
-            }
-          ]
-        },
-        {
-          "id": 503,
-          "name": "Egg Biryani",
-          "veg": false,
-          "varients": [
-            {
-              "varientId": 5030,
-              "varientName": "half",
-              "price": 60
-            },
-            {
-              "varientId": 5031,
-              "varientName": "full",
-              "price": 80
-            }
-          ]
-        },
-        {
-          "id": 504,
-          "name": "Veg Biryani",
-          "veg": true,
-          "varients": [
-            {
-              "varientId": 5040,
-              "varientName": "half",
-              "price": 60
-            },
-            {
-              "varientId": 5041,
-              "varientName": "full",
-              "price": 80
-            }
-          ]
-        },
-        {
-          "id": 505,
-          "name": "Chicken Fried Rice",
-          "veg": false,
-          "varients": [
-            {
-              "varientId": 5050,
-              "varientName": "half",
-              "price": 80
-            },
-            {
-              "varientId": 5051,
-              "varientName": "full",
-              "price": 100
-            }
-          ]
-        },
-        {
-          "id": 506,
-          "name": "Egg Fried Rice",
-          "veg": false,
-          "varients": [
-            {
-              "varientId": 5060,
-              "varientName": "half [1 egg]",
-              "price": 60
-            },
-            {
-              "varientId": 5061,
-              "varientName": "full [2 egg]",
-              "price": 120
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": 600,
       "title": "Breads",
       "items": [
@@ -1424,6 +1321,151 @@
               "varientId": 6050,
               "varientName": "piece",
               "price": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 700,
+      "title": "Biryanis",
+      "items": [
+        {
+          "id": 701,
+          "name": "Chicken Biryani With Gravy",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 7010,
+              "varientName": "half",
+              "price": 80
+            },
+            {
+              "varientId": 7011,
+              "varientName": "full",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": 702,
+          "name": "Chicken Leg Biryani With Gravy",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 7020,
+              "varientName": "Plate [1 legs + 2 piece]",
+              "price": 120
+            }
+          ]
+        },
+        {
+          "id": 703,
+          "name": "Egg Biryani",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 7030,
+              "varientName": "half",
+              "price": 60
+            },
+            {
+              "varientId": 7031,
+              "varientName": "full",
+              "price": 80
+            }
+          ]
+        },
+        {
+          "id": 704,
+          "name": "Veg Biryani",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 7040,
+              "varientName": "half",
+              "price": 60
+            },
+            {
+              "varientId": 7041,
+              "varientName": "full",
+              "price": 80
+            }
+          ]
+        },
+        {
+          "id": 705,
+          "name": "Chicken Fried Rice",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 7070,
+              "varientName": "half",
+              "price": 80
+            },
+            {
+              "varientId": 7051,
+              "varientName": "full",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "id": 706,
+          "name": "Egg Fried Rice",
+          "veg": false,
+          "varients": [
+            {
+              "varientId": 7060,
+              "varientName": "half [1 egg]",
+              "price": 60
+            },
+            {
+              "varientId": 7061,
+              "varientName": "full [2 egg]",
+              "price": 120
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 800,
+      "title": "Thali",
+      "items": [
+        {
+          "id": 801,
+          "name": "Normal Thali",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 8010,
+              "varientName": "plate",
+              "price": 50
+            }
+          ]
+        },
+        {
+          "id": 802,
+          "name": "Special Thali",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 8020,
+              "varientName": "plate",
+              "price": 70
+            }
+          ]
+        },
+        {
+          "id": 803,
+          "name": "Deluxe Thali",
+          "veg": true,
+          "varients": [
+            {
+              "varientId": 8030,
+              "varientName": "plate",
+              "price": 100
             }
           ]
         }

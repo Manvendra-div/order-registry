@@ -32,7 +32,7 @@ export default function Order({ order }: { order: OrderType }) {
           } else {
             toast.error(response.message);
           }
-        }
+        },
       );
       ordersObject.reload();
     }
@@ -55,7 +55,7 @@ export default function Order({ order }: { order: OrderType }) {
           className="absolute bottom-2 left-4 w-12 opacity-60"
         />
       )}
-      <span className="text-sm sm:text-base font-thin max-w-[60%] truncate">
+      <span className="text-sm sm:text-base font-thin max-w-32 sm:max-w-48 truncate">
         {order.name}
       </span>
       <HoverCard openDelay={0}>
@@ -78,7 +78,7 @@ export default function Order({ order }: { order: OrderType }) {
               >
                 <span className="text-sm font-semibold">{item.name}</span>
                 <span className="text-base font-bold">
-                  ₹{item.varients.price}
+                  ₹{item.varients.price * item.quantity}
                 </span>
               </div>
               <Separator className="w-full" />
