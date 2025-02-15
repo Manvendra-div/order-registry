@@ -1620,11 +1620,9 @@
         {
           "id": "1001",
           "name": "Amul Butter",
-          "varients": {
-            "varientId": 1010,
-            "varientName": "Amul Butter",
-            "price": 10
-          }
+          "varients": [
+            { "varientId": 1010, "varientName": "piece", "price": 10 }
+          ]
         }
       ]
     }
