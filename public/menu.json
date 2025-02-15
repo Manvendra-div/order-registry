@@ -1442,6 +1442,11 @@
               "varientId": 8010,
               "varientName": "plate",
               "price": 50
+            },
+            {
+              "varientId": 8011,
+              "varientName": "packing",
+              "price": 60
             }
           ]
         },
@@ -1454,6 +1459,11 @@
               "varientId": 8020,
               "varientName": "plate",
               "price": 70
+            },
+            {
+              "varientId": 8021,
+              "varientName": "packing",
+              "price": 80
             }
           ]
         },
@@ -1466,6 +1476,11 @@
               "varientId": 8030,
               "varientName": "plate",
               "price": 100
+            },
+            {
+              "varientId": 8031,
+              "varientName": "packing",
+              "price": 110
             }
           ]
         }
