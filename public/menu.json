@@ -1616,6 +1616,7 @@
     {
       "id": "1000",
       "title": "Extras",
+      "veg": true,
       "items": [
         {
           "id": "1001",
