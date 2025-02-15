@@ -1616,11 +1616,11 @@
     {
       "id": "1000",
       "title": "Extras",
-      "veg": true,
       "items": [
         {
           "id": "1001",
           "name": "Amul Butter",
+          "veg": true,
           "varients": [
             { "varientId": 1010, "varientName": "piece", "price": 10 }
           ]
