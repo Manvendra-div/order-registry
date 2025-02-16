@@ -1,8 +1,13 @@
 import { FINALITEMTYPE } from "@/types/item.type";
 
 export interface OrderType {
-  id?:string
-  timeStamp: Date;
+  id?: string;
+  timeStamp:
+    | Date
+    | {
+        nanoseconds: number;
+        seconds: number;
+      };
   orderId: string;
   isCash: boolean;
   contact?: string;

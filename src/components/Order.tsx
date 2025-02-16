@@ -3,7 +3,6 @@ import zomatoDark from "@/assets/zomato-dark.png";
 import zomatoLight from "@/assets/zomato-light.png";
 import swiggyDark from "@/assets/swiggy-dark.png";
 import swiggyLight from "@/assets/swiggy-light.png";
-import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
 import { Info, Loader2, QrCode, Wallet } from "lucide-react";
 import { useTheme } from "./ui/theme-provider";
@@ -24,6 +23,7 @@ import {
   TableHeader,
   TableRow,
 } from "./ui/table";
+import { format } from "date-fns";
 
 export default function Order({ order }: { order: OrderType }) {
   const { theme } = useTheme();
@@ -81,7 +81,15 @@ export default function Order({ order }: { order: OrderType }) {
         </HoverCardTrigger>
         <HoverCardContent className="p-0 mt-2 overflow-hidden max-w-96">
           <Table>
-            <TableCaption className="text-xs pb-4">Order Details</TableCaption>
+            <TableCaption className="text-xs pb-4">
+              {format(
+                new Date(
+                  order.timeStamp?.seconds * 1000 +
+                    order.timeStamp?.nanoseconds / 1000000,
+                ),
+                "MMMM d, yyyy HH:mm",
+              )}
+            </TableCaption>
             <TableHeader>
               <TableRow className="text-xs">
                 <TableHead>Quantity</TableHead>
