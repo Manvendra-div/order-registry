@@ -202,7 +202,7 @@ export default function AddOrderDailog({
           </DialogDescription>
         </DialogHeader>
 
-        <ScrollArea className="min-w-full flex items-center w-full h-[80vh] sm:h-auto">
+        <div className="min-w-full flex items-center w-full overflow-hidden">
           <AnimatePresence mode="wait">
             {currentScreen === 0 ? (
               <motion.div
@@ -272,7 +272,7 @@ export default function AddOrderDailog({
                 transition={{ duration: 0.2 }}
                 className="w-full h-[50vh] lg:h-[60vh]"
               >
-                <div className="flex flex-col gap-4 w-full p-4 h-full">
+                <ScrollArea className="flex flex-col w-full p-4 h-full">
                   <div className="w-full flex flex-col gap-2">
                     <h2 className="text-2xl font-medium">Order Summary</h2>
                     <div className="w-full bg-secondary/20 rounded-lg border flex flex-col p-4">
@@ -327,7 +327,7 @@ export default function AddOrderDailog({
                     value={paymentMethod}
                     onValueChange={setPaymentMethod as (value: string) => void}
                   >
-                    <SelectTrigger className="w-full bg-secondary/20">
+                    <SelectTrigger className="w-full bg-secondary/20 mt-4">
                       <SelectValue placeholder="Select a Payment Method" />
                     </SelectTrigger>
                     <SelectContent>
@@ -388,11 +388,11 @@ export default function AddOrderDailog({
                       </div>
                     </>
                   )}
-                </div>
+                </ScrollArea>
               </motion.div>
             )}
           </AnimatePresence>
-        </ScrollArea>
+        </div>
 
         <DialogFooter>
           <div className="flex items-center gap-4">
