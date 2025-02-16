@@ -1650,8 +1650,8 @@
           "name": "Water Bottle",
           "veg": true,
           "varients": [
-            { "varientId": 10020, "varientName": "bottle", "price": 10 },
-            { "varientId": 10021, "varientName": "bottle", "price": 20 }
+            { "varientId": 10020, "varientName": "mini bottle", "price": 10 },
+            { "varientId": 10021, "varientName": "normal bottle", "price": 20 }
           ]
         }
       ]
