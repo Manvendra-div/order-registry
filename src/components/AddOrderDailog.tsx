@@ -202,7 +202,7 @@ export default function AddOrderDailog({
           </DialogDescription>
         </DialogHeader>
 
-        <div className="min-w-full flex items-center w-full overflow-hidden">
+        <ScrollArea className="min-w-full flex items-center w-full h-[80vh] sm:h-auto">
           <AnimatePresence mode="wait">
             {currentScreen === 0 ? (
               <motion.div
@@ -392,7 +392,7 @@ export default function AddOrderDailog({
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
+        </ScrollArea>
 
         <DialogFooter>
           <div className="flex items-center gap-4">
