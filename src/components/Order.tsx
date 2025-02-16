@@ -86,7 +86,7 @@ export default function Order({ order }: { order: OrderType }) {
             <Info />
           </Button>
         </DialogTrigger>
-        <DialogContent className="pb-0 overflow-hidden w-fit max-w-2xl">
+        <DialogContent className="pb-0 overflow-hidden w-full sm:w-fit max-w-2xl">
           <DialogHeader>
             <DialogTitle>Order Details</DialogTitle>
             <DialogDescription>
