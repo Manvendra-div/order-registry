@@ -1642,7 +1642,7 @@
           "name": "Amul Butter",
           "veg": true,
           "varients": [
-            { "varientId": 1010, "varientName": "piece", "price": 10 }
+            { "varientId": 10010, "varientName": "piece", "price": 10 }
           ]
         },
         {
@@ -1650,8 +1650,8 @@
           "name": "Water Bottle",
           "veg": true,
           "varients": [
-            { "varientId": 1010, "varientName": "bottle", "price": 10 },
-            { "varientId": 1011, "varientName": "bottle", "price": 20 }
+            { "varientId": 10020, "varientName": "bottle", "price": 10 },
+            { "varientId": 10021, "varientName": "bottle", "price": 20 }
           ]
         }
       ]
