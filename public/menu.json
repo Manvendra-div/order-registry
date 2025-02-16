@@ -1644,6 +1644,15 @@
           "varients": [
             { "varientId": 1010, "varientName": "piece", "price": 10 }
           ]
+        },
+        {
+          "id": "1002",
+          "name": "Water Bottle",
+          "veg": true,
+          "varients": [
+            { "varientId": 1010, "varientName": "bottle", "price": 10 },
+            { "varientId": 1011, "varientName": "bottle", "price": 20 }
+          ]
         }
       ]
     }
