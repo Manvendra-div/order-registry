@@ -46,6 +46,16 @@ import { Checkbox } from "./ui/checkbox";
 import { MenuType } from "@/types/menu.type";
 import { Helmet } from "react-helmet";
 import useOrderList from "@/hooks/ordersList.hook";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "./ui/table";
 
 const Item = ({ data }: { data: ITEMTYPE }) => {
   return (
@@ -265,35 +275,52 @@ export default function AddOrderDailog({
                 <div className="flex flex-col gap-4 w-full p-4 h-full">
                   <div className="w-full flex flex-col gap-2">
                     <h2 className="text-2xl font-medium">Order Summary</h2>
-                    <div className="w-full bg-secondary/20 rounded-lg border flex flex-col">
-                      {foodBasket && (
-                        <ScrollArea className="w-full max-h-32 px-4">
-                          {foodBasket.map((foodItem) => (
-                            <div className="flex justify-between items-center text-muted-foreground py-2 border-t">
-                              <div className="flex justify-center items-center gap-4">
-                                <span className="font-semibold text-xl">
-                                  {foodItem.quantity}
-                                </span>
-                                <span className="capitalize font-medium text-sm">
-                                  {foodItem.varients.varientName}
-                                </span>
-                                <span className="text-xs sm:text-sm font-medium text-foreground text-nowrap">
-                                  {foodItem.name}
-                                </span>
-                              </div>
-                              <div className="text-foreground text-2xl font-bold">
-                                ₹{foodItem.quantity * foodItem.varients.price}
-                              </div>
-                            </div>
-                          ))}
-                        </ScrollArea>
-                      )}
-                      <div className="flex justify-between items-center text-muted-foreground py-2 border-t px-4">
-                        <span className="font-semibold text-xl">Total</span>
-                        <div className="text-foreground text-2xl font-bold">
-                          ₹{totalAmount}
-                        </div>
-                      </div>
+                    <div className="w-full bg-secondary/20 rounded-lg border flex flex-col p-4">
+                      <Table>
+                        <TableCaption>Order Summary</TableCaption>
+                        <TableHeader>
+                          <TableRow>
+                            <TableHead className="w-[100px]">
+                              Quantity
+                            </TableHead>
+                            <TableHead>Variant</TableHead>
+                            <TableHead>Item Name</TableHead>
+                            <TableHead className=" text-right">Price</TableHead>
+                          </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                          {foodBasket &&
+                            foodBasket.map((item) => (
+                              <TableRow key={item.id}>
+                                <TableCell className="font-semibold text-xl">
+                                  {item.quantity}
+                                </TableCell>
+                                <TableCell className="capitalize font-semibold text-sm">
+                                  {item.varients.varientName}
+                                </TableCell>
+                                <TableCell className="text-xs sm:text-sm font-medium text-foreground text-nowrap">
+                                  {item.name}
+                                </TableCell>
+                                <TableCell className="text-foreground text-2xl font-bold text-right">
+                                  ₹{item.quantity * item.varients.price}
+                                </TableCell>
+                              </TableRow>
+                            ))}
+                        </TableBody>
+                        <TableFooter>
+                          <TableRow>
+                            <TableCell
+                              colSpan={3}
+                              className="font-semibold text-xl"
+                            >
+                              Total
+                            </TableCell>
+                            <TableCell className="text-right text-foreground text-2xl font-bold">
+                              ₹{totalAmount}
+                            </TableCell>
+                          </TableRow>
+                        </TableFooter>
+                      </Table>
                     </div>
                   </div>
                   <Select

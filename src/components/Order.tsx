@@ -14,6 +14,16 @@ import { useEffect, useState } from "react";
 import { updateOrder } from "@/firebase/functions";
 import { toast } from "sonner";
 import useOrderList from "@/hooks/ordersList.hook";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "./ui/table";
 
 export default function Order({ order }: { order: OrderType }) {
   const { theme } = useTheme();
@@ -69,25 +79,46 @@ export default function Order({ order }: { order: OrderType }) {
             <Info />
           </Button>
         </HoverCardTrigger>
-        <HoverCardContent className="p-0 mt-2 overflow-hidden">
-          {order.items.map((item) => (
-            <>
-              <div
-                key={item.id}
-                className="text-muted-foreground flex justify-between items-center px-4 py-2"
-              >
-                <span className="text-sm font-semibold">{item.name}</span>
-                <span className="text-base font-bold">
-                  ₹{item.varients.price * item.quantity}
-                </span>
-              </div>
-              <Separator className="w-full" />
-            </>
-          ))}
-          <div className="text-muted-foreground flex justify-between items-center px-4 py-2">
-            <span className="text-base font-semibold">Total</span>
-            <span className="text-lg font-bold">₹{order.allTotal}</span>
-          </div>
+        <HoverCardContent className="p-0 mt-2 overflow-hidden max-w-96">
+          <Table>
+            <TableCaption className="text-xs pb-4">Order Details</TableCaption>
+            <TableHeader>
+              <TableRow className="text-xs">
+                <TableHead>Quantity</TableHead>
+                <TableHead className="w-[100px]">Variant</TableHead>
+                <TableHead>Name</TableHead>
+                <TableHead className=" text-right">Price</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {order.items.map((item) => (
+                <TableRow key={item.id}>
+                  <TableCell className="text-xs font-semibold text-center">
+                    {item.quantity}
+                  </TableCell>
+                  <TableCell className="text-xs font-semibold capitalize text-center">
+                    {item.varients.varientName}
+                  </TableCell>
+                  <TableCell className="text-xs font-semibold">
+                    {item.name}
+                  </TableCell>
+                  <TableCell className="text-base font-bold text-right">
+                    ₹{item.quantity * item.varients.price}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+            <TableFooter>
+              <TableRow>
+                <TableCell colSpan={3} className="text-base font-semibold">
+                  Total
+                </TableCell>
+                <TableCell className="text-lg font-bold">
+                  ₹{order.allTotal}
+                </TableCell>
+              </TableRow>
+            </TableFooter>
+          </Table>
         </HoverCardContent>
       </HoverCard>
 
