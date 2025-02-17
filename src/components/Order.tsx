@@ -58,7 +58,7 @@ export default function Order({ order }: { order: OrderType }) {
   return (
     <div className="w-full p-2 relative h-20 border bg-muted/20 rounded-md flex justify-between items-center px-4">
       <span className="absolute top-1.5 left-3.5 text-sm font-mono text-muted-foreground">
-        {order.orderId}
+        {order.id}
       </span>
       {order.isZomato && (
         <img

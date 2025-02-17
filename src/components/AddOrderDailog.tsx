@@ -8,7 +8,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "./ui/dialog";
-import { ScrollArea } from "./ui/scroll-area";
+import { ScrollArea, ScrollBar } from "./ui/scroll-area";
 import { Button } from "./ui/button";
 import {
   ArrowRight,
@@ -49,7 +49,6 @@ import useOrderList from "@/hooks/ordersList.hook";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableFooter,
   TableHead,
@@ -182,7 +181,7 @@ export default function AddOrderDailog({
       )}
 
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="sm:max-w-[80%]">
+      <DialogContent className="w-full max-w-[100vw] sm:max-w-[80vw]">
         <DialogHeader>
           <DialogTitle>
             Create a Order{" "}
@@ -202,7 +201,7 @@ export default function AddOrderDailog({
           </DialogDescription>
         </DialogHeader>
 
-        <div className="min-w-full flex items-center w-full overflow-hidden">
+        <div className="w-full flex justify-center items-center">
           <AnimatePresence mode="wait">
             {currentScreen === 0 ? (
               <motion.div
@@ -211,7 +210,7 @@ export default function AddOrderDailog({
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.2 }}
-                className="w-full h-[50vh] lg:h-[60vh]"
+                className="w-full h-fit"
               >
                 <div className="flex flex-col justify-center w-full">
                   <div className="relative w-[99%] mt-4 mb-2 ml-2">
@@ -259,7 +258,7 @@ export default function AddOrderDailog({
                           ),
                       )}
                     </div>
-                    <div className="absolute bottom-0 w-full bg-gradient-to-t from-background/60 to-transparent z-20 h-10" />
+                    <div className="absolute bottom-10 w-full bg-gradient-to-t from-background/60 to-transparent z-10 h-10" />
                   </ScrollArea>
                 </div>
               </motion.div>
@@ -270,64 +269,59 @@ export default function AddOrderDailog({
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.2 }}
-                className="w-full h-[50vh] lg:h-[60vh]"
+                className="w-full"
               >
-                <ScrollArea className="flex flex-col w-full p-4 h-full">
-                  <div className="w-full flex flex-col gap-2">
-                    <h2 className="text-2xl font-medium">Order Summary</h2>
-                    <div className="w-full bg-secondary/20 rounded-lg border flex flex-col p-4">
-                      <Table>
-                        <TableCaption>Order Summary</TableCaption>
-                        <TableHeader>
-                          <TableRow>
-                            <TableHead className="w-[100px]">
-                              Quantity
-                            </TableHead>
-                            <TableHead>Variant</TableHead>
-                            <TableHead>Item Name</TableHead>
-                            <TableHead className=" text-right">Price</TableHead>
-                          </TableRow>
-                        </TableHeader>
-                        <TableBody>
-                          {foodBasket &&
-                            foodBasket.map((item) => (
-                              <TableRow key={item.id}>
-                                <TableCell className="font-semibold text-xl">
-                                  {item.quantity}
-                                </TableCell>
-                                <TableCell className="capitalize font-semibold text-sm">
-                                  {item.varients.varientName}
-                                </TableCell>
-                                <TableCell className="text-xs sm:text-sm font-medium text-foreground text-nowrap">
-                                  {item.name}
-                                </TableCell>
-                                <TableCell className="text-foreground text-2xl font-bold text-right">
-                                  ₹{item.quantity * item.varients.price}
-                                </TableCell>
-                              </TableRow>
-                            ))}
-                        </TableBody>
-                        <TableFooter>
-                          <TableRow>
-                            <TableCell
-                              colSpan={3}
-                              className="font-semibold text-xl"
-                            >
-                              Total
-                            </TableCell>
-                            <TableCell className="text-right text-foreground text-2xl font-bold">
-                              ₹{totalAmount}
-                            </TableCell>
-                          </TableRow>
-                        </TableFooter>
-                      </Table>
-                    </div>
-                  </div>
+                <div className="flex flex-col w-full gap-4 items-center">
+                  <ScrollArea className="w-full h-fit max-w-[90vw] max-h-96 sm:w-full flex flex-col gap-2">
+                    <Table className="bg-secondary/10 border rounded-lg">
+                      <TableHeader>
+                        <TableRow className="text-xs">
+                          <TableHead>Quantity</TableHead>
+                          <TableHead className="w-[100px]">Variant</TableHead>
+                          <TableHead className="w-[100px]">Name</TableHead>
+                          <TableHead className=" text-right">Price</TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                        {foodBasket &&
+                          foodBasket.map((item) => (
+                            <TableRow key={item.id}>
+                              <TableCell className="text-xs font-semibold text-left text-nowrap">
+                                {item.quantity}
+                              </TableCell>
+                              <TableCell className="text-xs font-semibold capitalize text-nowrap">
+                                {item.varients.varientName}
+                              </TableCell>
+                              <TableCell className="text-xs font-semibold">
+                                <span className="text-nowrap">{item.name}</span>
+                              </TableCell>
+                              <TableCell className="text-base font-bold text-right text-nowrap">
+                                ₹{item.quantity * item.varients.price}
+                              </TableCell>
+                            </TableRow>
+                          ))}
+                      </TableBody>
+                      <TableFooter>
+                        <TableRow>
+                          <TableCell
+                            colSpan={3}
+                            className="text-base font-semibold"
+                          >
+                            Total
+                          </TableCell>
+                          <TableCell className="text-lg font-bold text-right">
+                            ₹{totalAmount}
+                          </TableCell>
+                        </TableRow>
+                      </TableFooter>
+                    </Table>
+                    <ScrollBar orientation="horizontal" />
+                  </ScrollArea>
                   <Select
                     value={paymentMethod}
                     onValueChange={setPaymentMethod as (value: string) => void}
                   >
-                    <SelectTrigger className="w-full bg-secondary/20 mt-4">
+                    <SelectTrigger className="w-full bg-secondary/20">
                       <SelectValue placeholder="Select a Payment Method" />
                     </SelectTrigger>
                     <SelectContent>
@@ -388,7 +382,7 @@ export default function AddOrderDailog({
                       </div>
                     </>
                   )}
-                </ScrollArea>
+                </div>
               </motion.div>
             )}
           </AnimatePresence>
